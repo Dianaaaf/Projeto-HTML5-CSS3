@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*CONFIGURAÇÃO DO FORMULÁRIO*/
+form{
+    width: 500px;
+    margin: auto;
+}
+fieldset{
+    margin: 12px;
+    padding: 10px;
+    border-color: rgb(221, 218, 218);
+}
+legend{
+    font-family: 'Fantasy', cursive;
+    font-size: 14pt;
+    font-weight: bold;
+}
+input{
+    font-family: sans-serif;
+    font-size: 11pt;
+    background-color: rgba(255, 255, 255, .4);
+}
+input:hover{
+    background-color: rgb(221, 218, 218);
+}
+#identificacao{
+    background: url('../_imagens/icone-contato.png') no-repeat 95% 95%;
+}
+#endereco{
+    background: url('../_imagens/icone-endereco.png') no-repeat 95% 95%;
+}
+#mensagem{
+    background: url('../_imagens/icone-mensagem.png') no-repeat 95% 95%;
+}
+#adquirir{
+    background: url('../_imagens/icone-pagamento.png') no-repeat 95% 95%;
+}
+
+
+
+
+
+

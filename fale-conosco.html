@@ -1,0 +1,119 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_Total(){
+            var quant = parseInt(document.getElementById('number-quant').value);
+            var total = quant * 1500;
+            document.getElementById('preco-texto').value = total;
+        }
+    </script>
+</head>
+
+<body>  
+<div id="interface-total">   
+    <header id="cabecalho"> 
+        <h1> Google Glass </h1>
+        <h2> A revolução do Google está chegando </h2>
+
+<img id="icone" src="_imagens/contato.png" alt="">
+
+<nav id="menu">
+<h1> Menu Principal </h1>
+    <ul>
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html"> Home </a></li>
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html"> Especificações </a></li>
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html"> Fotos </a></li>
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html"> Multimídia </a></li>
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html"> Fale conosco </a></li>
+    </ul>
+</nav>
+</header>
+
+<section id="corpo-full">
+    <article id="noticia-principal">  
+        <header id="cabecalho-artigo">    
+            <h3> Fale Conosco > Contato </h3>
+            <h1> Formulário de Contato </h1>
+            <h2> por Diana Alves </h2>
+            <h3 class="inf-direita"> Atualizado em 26/Março/2021 </h3>
+        </header>    
+
+    <form method="POST" oninput="calc_Total();">
+
+        <fieldset id="identificacao">
+            <legend> Identificação do Usuário </legend>
+            <p> Nome: <input type="text" name="txt-nome" id="texto-nome" size="50" maxlength="80" placeholder="Seu nome completo."/></p>
+
+            <p>Senha: <input type="password" name="pass-senha" id="pss-senha" size="30" minlength="8" maxlength="12" placeholder="Senha de 8-10 caracteres"></p>
+
+            <p>E-mail: <input type="email" name="email-mail" id="mail-email" size="50" placeholder="usuario@email.com.br"></p>
+
+            <fieldset>
+                <legend> Sexo: </legend>
+                <input type="radio" name="radio" id="masc-radio"><label for="masc-radio"> Masculino </label>
+                <input type="radio" name="radio" id="femi-radio"><label for="femi-radio"> Feminino </label>
+            </fieldset>
+
+            <p> Data de Nascimento: <input type="date" name="d-data" id="data-d"></p>
+        </fieldset>
+
+        <fieldset id="endereco">
+            <legend> Endereço do Usuário </legend>
+            <p> Logradouro: <input type="text" name="txt-end" id="ende-texto" size="40" placeholder="Rua, avenida, etc."></p>
+            <p> Número: <input type="number" name="n-num" id="numero-n" maxlength="4"></p>
+
+            <p> Estado:  
+                <select type="text" name="txt-estado" id="estado-t">
+                    <option>  </option>
+                    <option> Minas Gerais </option>
+                    <option> São Paulo </option>
+                    <option> Rio de Janeiro </option>
+                    <option> Espiríto Santo </option>
+                </select>
+            </p>
+
+            <p> Cidade: 
+                <select type="text" name="txt-cidade" id="cidade-t">
+                    <option>  </option>
+                    <option> Belo Horizonte </option>
+                    <option> São Paulo </option>
+                    <option> Rio de Janeiro </option>
+                    <option> Guarapari </option>
+                </select>    
+            </p>
+        </fieldset>
+
+        <fieldset id="mensagem">
+            <legend> Mensagem do Usuário </legend>
+            <p> Grau de Urgência: 0<input type="range" name="r-urge" id="urgen-r" step="1">10</p>
+            <p> Mensagem: <input type="text" name="txt-mens" id="mensagem-t" size="60"></p>
+        </fieldset>
+
+        <fieldset id="adquirir">
+            <legend> Quero um Google Glass </legend>
+            <p><input type="checkbox" name="c-check" id="check-c"> Gostaria de adquirir um Google Glass quando disponível. </p>
+            <p> Cor: <input type="color" name="c-cor" id="cor-c"></p>
+            <p> Quantidade: <input type="number" name="n-quant" id="number-quant" maxlength="3"></p>
+            <p> Preço Total: R$ <input type="text" name="txt-preco" id="preco-texto" placeholder="Total a Pagar" readonly></p>
+        </fieldset>
+
+        <img src="_imagens/botao-enviar.png">
+    </form>
+
+    </article>
+</section>  
+
+<footer id="rodape">
+    <p> 2021 - by Diana Alves <br>
+    <a href="https://github.com/Dianaaaf" target="_blank"> GitHub </a> | 
+        <a href="https://www.linkedin.com/in/diana-alves-6a99271b5/" target="_blank"> Linkedin </a></p>
+</footer>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+/*DIV COM AUDIO E VÍDEOS*/
+#tv-radio{
+    width: 900px;
+    height: 580px;
+    margin: auto;
+    background: url('../_imagens/radio-tv.png') no-repeat;
+}
+#musica{
+    display: block;
+    position: relative;
+    left: 572px;
+    top: 487.5px;
+    width: 300px;
+}
+#filme01{
+    display: block;
+    position: relative;
+    left: 92px;
+    top: 60px;
+    width: 440px;
+}
+
+
+
+
+
+
+

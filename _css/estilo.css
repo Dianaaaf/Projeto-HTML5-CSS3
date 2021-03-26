@@ -1,0 +1,259 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Yusei+Magic);
+@font-face{
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+/*FONT FACE-> fontes personalizadas/ baixadas no computador*/
+
+
+/*FORMATAÇÕES UNIVERSAIS*/
+body{
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+}
+p{
+    text-align: justify; 
+    text-indent: 10px; /*text-indent corresponde ao espaçamento em branco antes do paragráfo iniciar*/
+}
+a{
+    color: #000080;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: underline; /*o sublinhado de link aparece quando o mouse passa em cima*/
+}
+
+
+
+/*FORMATAÇÃO DE IMAGENS*/
+/*imagem com legenda*/
+figure.foto-legenda{
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+    position: relative; /*faz a legenda ficar dentro do mesmo container*/
+}
+figure.foto-legenda img{
+    width: 400px; /*largura*/
+    height: 400px; /*altura*/
+}
+figure.foto-legenda figcaption{
+    position: absolute; /*posição absoluta DENTRO do figure.foto-legenda*/
+    top: 0px;
+    opacity: 0;
+    background-color: rgba(0,0,0,.4); /*RGBA permite colocar transparência (último número)*/
+    color: white;
+    width: 100%; /*largura*/
+    height: 100%; /*altura*/
+    padding: 10px;
+    box-sizing: border-box;
+}
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+    transition: opacity 1s;
+}
+/*imagem do óculos*/
+#icone{
+    position: absolute;
+    left: 780px;
+    top: 70px;
+}
+
+
+/*FORMATAÇÃO COM CLASS*/
+/*tabela de especificações técnicas*/
+.CE{
+    color: white;
+    background-color: dimgray;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 13pt;
+}
+.CD{
+    background-color: lightgray;
+}
+
+/*H3 do Header do Article*/
+.inf-direita{
+    text-align: right; /*direita*/
+}
+
+
+/*FORMATAÇÃO COM ID*/
+/*menu*/
+#menu{
+    display: block;
+}
+#menu ul{
+    list-style: none;
+    text-transform: uppercase; /*deixa as letras em maiúsculo*/
+    position: absolute; /*se movimenta pelo site todo, não apenas no container*/
+    top: -17px;
+    left: 300px; /*esquerda*/
+}
+#menu li{
+    display: inline-block;
+    background-color: gainsboro;
+    padding: 7px; /*espaço interno*/
+    margin: 2px; /*espaço externo*/
+    transition: background-color 1s;
+}
+#menu li:hover{
+    background-color: gray;
+}
+#menu h1{
+    display: none;
+}
+#menu a{
+    color: black;
+    text-decoration: none; /*opção NONE tira o sublinhado de link*/
+}
+#menu a:hover{
+    color: white;
+}
+#filme01{
+    width: 50px;
+    height: 50px;
+}
+
+/*ARTICLE -> artigo*/
+#noticia-principal h2{
+    font-size: 12pt;
+    color: #363636;
+    background-color: #A9A9A9;
+    padding: 5px 0px 5px 10px; /*cima,direita,baixo,esquerda*/
+    margin: 10px 0px 10px 0px;
+}
+/*cabeçalho do ARTICLE*/
+#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: black;
+    margin-bottom: 0px;
+}
+#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #696969;
+    background-color: white;
+    margin: 0px;
+}
+#cabecalho-artigo h3{
+    font-size: 10pt;
+    color: c;
+    font-style: italic;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+/*tabela de especificações técnicas*/
+#table {
+    border: 1px solid black;
+    border-spacing: 0px; /*espaço entre as células*/
+    margin-left: auto;
+    margin-right: auto;
+}
+#table td{
+    border: 1px dashed black; /*dashed: pontilhada*/
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+#table caption{
+    color: royalblue;
+    font-size: 11pt;
+    font-weight: bolder;
+}    
+#table span{
+    display: block;
+    float: right;
+    color: royalblue;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+
+/*DIV do resto do corpo do site*/
+#interface-total{
+    width: 900px;
+    background-color: white;
+    margin: -10px auto 0px auto; /*cima,direita,baixo,esquerda*/ /*corpo centralizado*/
+    padding: 10px 10px 10px 10px; /*cima,direita,baixo,esquerda*/
+    box-shadow: 0px 0px 10px gray; /*lateral,vertical,espalhamento*/
+}
+
+
+/*cabeçalho no geral*/
+#cabecalho{
+    border-bottom: 1px gray solid; /*bottom-> de baixo*/
+    height: 150px; /*altura*/
+    background: url(../_imagens/glass-logo-peq.jpg) no-repeat 0px 100px; /*lateral,vertical*/
+}
+#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: black;
+    text-shadow: 2px 2px 2px black; /*lateral,vertical,espalhamento*/
+    padding: 0px; /*espaço interno*/
+    margin-bottom: 0px; /*bottom-> de baixo*/
+}
+#cabecalho h2{
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 15pt;
+    color: gray;
+    padding: 0px; /*espaço interno*/
+    margin-top: 0px; /*top-> de cima*/
+}
+
+
+/*DIVISÃO DO SITE EM ESQUERDA E DIREITA*/
+/*SECTION: Cria uma sessão que vai poder conter vários artigos/Sessão principal; */
+/*SESSÃO PRINCIPAL/ESQUERDA*/
+#SessaoPrin{
+    display: block;
+    width: 500px; /*largura*/
+    float: left; /*esquerda*/ /*para usar o FLOAT, precisa estar em BLOCK*/
+    border-right: 1px solid black;
+    padding-right: 15px;
+}
+
+
+/*ASIDE: São conteúdos periféricos, que estão diretamente relacionados ao conteúdo do artigo principal.*/
+/*SESSÃO LATERAL/DIREITA*/
+#SessaoLat{
+    display: block;
+    width: 350px; /*largura*/
+    float: right; /*direita*/ /*para usar o FLOAT, precisa estar em BLOCK*/
+    background-color: #D3D3D3;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: black 2px 2px 2px; /*lateral,vertical,espalhamento*/
+}
+#SessaoLat h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: black;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#SessaoLat h2{
+    font-size: 12pt;
+    color: #363636;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+
+/*FOOTER: É o rodapé da página ou do conteúdo específico.*/
+/*RODAPÉ/FOOTER*/
+#rodape{
+    clear: both; /*"limpa" a configuração da SECTION e ASIDE*/
+    border-top: 5px solid black;
+}
+#rodape p{
+    text-align: center;
+}
+#rodape a{
+    color: black;
+    text-decoration: none; /*opção NONE tira o sublinhado de link*/
+}
